@@ -10,4 +10,6 @@ class get_classification(APIView):
     model = load_model('./api/titanic_model.pk')
     data = request.data
     prediction = classify_passenger(model = model, data = data)
+    print("hEYYYYYYYYYYYYYYYYYYYYYYY")
+
     return(Response(prediction))
